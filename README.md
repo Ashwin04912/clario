@@ -20,6 +20,20 @@ With **clario**, you can instantly highlight any word, jargon, or paragraph to o
 
 ---
 
+## 📸 Screenshots
+
+Here is **clario** in action:
+
+| 1. Dashboard Welcome Screen | 2. API Validation Success |
+|:---:|:---:|
+| ![Popup Welcome Screen](images/popup_welcome.png) | ![API Validation Success](images/popup_success.png) |
+
+| 3. Inline Jargon & Sentence Simplifier | 4. Interactive Sidebar Chat & "Dig Deeper" Focus Mode |
+|:---:|:---:|
+| ![Inline Jargon Dictionary](images/dictionary_tooltip.png) | ![Interactive Sidebar Focus Mode](images/sidebar_chat.png) |
+
+---
+
 ## 🛠️ Installation & Setup
 
 1.  **Clone or Download** this repository to your local device.
