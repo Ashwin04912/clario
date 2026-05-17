@@ -1,4 +1,4 @@
-# 🌌 clario
+# CLARIO
 ### **Clarity in Every Highlight.**
 *Your AI Layer for Understanding.*
 
@@ -93,6 +93,10 @@ Whether it’s fixing a bug, suggesting a feature, improving UI/UX, or contribut
 
 If you love using **clario** and want to support its ongoing development, feel free to support the developer directly! It keeps the lights on and the neon glowing.
 
-*   **UPI / Google Pay**: `ashwin.04912-1@okaxis` (Scan & Pay or enter UPI ID)
+<p align="left">
+  <img src="images/upi_qr.png" width="160" alt="UPI QR Code"><br>
+  <b>UPI / Google Pay:</b> <code>ashwin.04912-1@okaxis</code> (Scan above or enter UPI ID)
+</p>
+
 *   **GitHub Sponsors**: Sponsor directly via the GitHub Repository.
 
