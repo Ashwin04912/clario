@@ -94,7 +94,7 @@ Whether it’s fixing a bug, suggesting a feature, improving UI/UX, or contribut
 If you love using **clario** and want to support its ongoing development, feel free to support the developer directly! It keeps the lights on and the neon glowing.
 
 <p align="center">
-  <img src="images/upi_qr.png" width="225" alt="Buy Me A Coffee - Scan to Pay">
+  <img src="images/upi_qrr.png" width="225" alt="Buy Me A Coffee - Scan to Pay">
 </p>
 
 
