@@ -78,3 +78,21 @@ Once **clario** is loaded and your Gemini API key is configured, you're ready to
 ### 4. 🧠 "Dig Deeper" Focus Mode
 *   Inside the sidebar under the **"Dig Deeper"** section, you will see a list of all technical topics/jargon you have simplified so far on this page.
 *   **Click any topic pill** to lock the AI's focus. The AI will load the topic context, allowing you to ask hyper-specific, deep questions to master the concept!
+
+---
+
+## 🤝 Contributing
+
+If you find any bugs, issues, or improvement ideas while using Clario, feel free to open an issue on GitHub. Your feedback and contributions are truly valuable and help make Clario better for everyone. 🚀
+
+Whether it’s fixing a bug, suggesting a feature, improving UI/UX, or contributing code — every contribution matters. So do contribute and be part of building Clario together.
+
+---
+
+## ☕ Support Clario
+
+If you love using **clario** and want to support its ongoing development, feel free to support the developer directly! It keeps the lights on and the neon glowing.
+
+*   **UPI / Google Pay**: `ashwin.04912-1@okaxis` (Scan & Pay or enter UPI ID)
+*   **GitHub Sponsors**: Sponsor directly via the GitHub Repository.
+
