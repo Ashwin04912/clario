@@ -1,0 +1,398 @@
+/* ==========================================
+   Neon Noir Design System - DocMind AI Styling
+   ========================================== */
+
+#docmind-ai-root {
+  --neon-pink: #FF007A;
+  --neon-cyan: #00F0FF;
+  --bg-deep: #0A0A0C;
+  --bg-panel: #121214;
+  --bg-card: #1C1C1F;
+  --text-main: #FFFFFF;
+  --text-body: #E5E7EB;
+  --text-muted: #8E8E93;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-neon-pink: rgba(255, 0, 122, 0.3);
+  --border-neon-cyan: rgba(0, 240, 255, 0.3);
+
+  position: fixed;
+  z-index: 2147483647;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Floating Action Button (FAB) */
+#docmind-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--bg-deep);
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0 0 15px rgba(255, 0, 122, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neon-pink);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2147483647;
+}
+
+#docmind-fab:hover {
+  transform: scale(1.08) rotate(15deg);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+}
+
+#docmind-fab svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+/* Sidebar Panel */
+#docmind-sidebar {
+  position: fixed;
+  top: 0;
+  right: -420px; /* Hidden */
+  width: 400px;
+  height: 100vh;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border-subtle);
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.8);
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  z-index: 2147483646;
+  color: var(--text-main);
+  overflow: hidden;
+}
+
+#docmind-sidebar.open {
+  right: 0;
+}
+
+/* Header */
+.docmind-header {
+  padding: 24px;
+  background: var(--bg-deep);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.docmind-title {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px rgba(255, 0, 122, 0.4);
+}
+
+.docmind-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--neon-pink);
+  box-shadow: 0 0 8px rgba(255, 0, 122, 0.4);
+  object-fit: cover;
+}
+
+.docmind-close {
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.docmind-close:hover {
+  color: var(--neon-pink);
+  transform: rotate(90deg);
+}
+
+/* Content Area */
+.docmind-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--bg-deep);
+}
+
+/* Action Buttons Grid */
+.docmind-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.docmind-action-btn {
+  flex: 1;
+  border-radius: 100px; /* Pill button shape from theme image */
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  outline: none;
+}
+
+.docmind-action-btn.primary {
+  background: var(--neon-pink);
+  border: none;
+  color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(255, 0, 122, 0.3);
+}
+
+.docmind-action-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
+}
+
+.docmind-action-btn.secondary {
+  background: var(--bg-panel);
+  border: 1.5px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+.docmind-action-btn.secondary:hover {
+  background: var(--neon-cyan);
+  color: var(--bg-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+}
+
+/* Chat Messages */
+.docmind-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.docmind-message {
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 85%;
+  word-wrap: break-word;
+  font-family: 'Inter', sans-serif;
+}
+
+.docmind-message.user {
+  background: var(--neon-pink);
+  color: #FFFFFF;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 12px rgba(255, 0, 122, 0.2);
+}
+
+.docmind-message.ai {
+  background: var(--bg-card);
+  color: var(--text-body);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--neon-cyan); /* Neon teal indicator from theme */
+}
+
+.docmind-message.ai pre {
+  background: #050507;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.docmind-message.ai code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* Input Area */
+.docmind-input-area {
+  padding: 24px;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-panel);
+}
+
+.docmind-input-box {
+  display: flex;
+  background: var(--bg-deep);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 100px; /* Matching the pill inputs of Neon Noir */
+  padding: 6px;
+  transition: border-color 0.3s;
+}
+
+.docmind-input-box:focus-within {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 10px rgba(255, 0, 122, 0.2);
+}
+
+.docmind-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  padding: 10px 18px;
+  font-size: 14px;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.docmind-send {
+  background: var(--neon-pink);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 122, 0.3);
+}
+
+.docmind-send:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 122, 0.5);
+}
+
+/* Typing Indicator */
+.docmind-typing {
+  display: flex;
+  gap: 6px;
+  padding: 6px 0;
+}
+
+.docmind-typing-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  animation: docmindBounce 1.4s infinite ease-in-out both;
+}
+
+.docmind-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.docmind-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes docmindBounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* Jargon Explainer Button & Tooltip */
+#docmind-jargon-btn {
+  position: absolute;
+  z-index: 2147483647;
+  background: var(--bg-deep);
+  border: 1.5px solid var(--neon-pink);
+  box-shadow: 0 0 15px rgba(255, 0, 122, 0.3);
+  color: var(--text-main);
+  border-radius: 100px; /* Fully rounded buttons from image */
+  padding: 8px 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+#docmind-jargon-btn:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+#docmind-jargon-tooltip {
+  position: absolute;
+  z-index: 2147483647;
+  background: var(--bg-panel);
+  border: 1.5px solid var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+  color: var(--text-body);
+  border-radius: 16px;
+  padding: 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 320px;
+  display: none;
+}
+
+/* Simplified Topics Section */
+.docmind-topics-section {
+  background: rgba(0, 240, 255, 0.04);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.docmind-topics-header {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+.docmind-topics-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.docmind-topic-pill {
+  background: rgba(255, 0, 122, 0.08);
+  border: 1.5px solid rgba(255, 0, 122, 0.2);
+  color: var(--text-body);
+  border-radius: 100px; /* Match pill shapes of image */
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Inter', sans-serif;
+}
+
+.docmind-topic-pill:hover, .docmind-topic-pill.active {
+  background: var(--neon-pink);
+  border-color: var(--neon-pink);
+  color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(255, 0, 122, 0.4);
+  transform: translateY(-1px);
+}
