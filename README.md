@@ -16,7 +16,7 @@ With **clario**, you can instantly highlight any word, jargon, or paragraph to o
 *   **🧠 "Dig Deeper" Focus Mode**: As you simplify jargon on a page, **clario** automatically lists them in a dedicated interactive list inside your sidebar. Click a topic pill to lock the AI's focus onto that specific topic and ask context-aware follow-up questions.
 *   **💬 Interactive Neon Noir Sidebar**: A robust, context-aware chatbot overlay designed with vibrant cyber-gradients. Chat with the AI using the entire page content or targeted topic definitions as reference context.
 *   **🎨 Custom Audience Tuning**: Choose between **Beginner Level** (explain like I'm 5, use analogies), **Quick Revision** (bullet points & takeaways), and **Very Concise** (executive summary) to customize explanations to your skill level.
-*   **🔒 Local-First API Keys**: Your OpenAI or Google Gemini API keys are validated and stored locally on your device using the secure `chrome.storage` API. No server middle-men.
+*   **🔒 Local-First API Keys**: Your Google Gemini API keys are validated and stored locally on your device using the secure `chrome.storage` API. No server middle-men.
 
 ---
 
