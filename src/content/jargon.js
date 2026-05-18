@@ -92,7 +92,7 @@ class DocMindJargonExplainer extends BaseUIComponent {
     try {
       const result = await DocMindAPI.ask(prompt);
       this.tooltip.innerHTML = `
-        <div style="font-weight: 700; color: var(--neon-cyan); margin-bottom: 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">clariyor dictionary</div>
+        <div style="font-weight: 700; color: var(--neon-cyan); margin-bottom: 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">clarior dictionary</div>
         <div style="font-size: 14px; color: #FFF;">${DocMindAPI.parseMarkdown(result)}</div>
       `;
 

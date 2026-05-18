@@ -190,7 +190,7 @@ Instructions:
           const tooltip = document.createElement('div');
           tooltip.style.cssText = 'display: none; position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); width: 350px; padding: 16px; background: #0A0A0C; color: #E5E7EB; font-family: system-ui, -apple-system, sans-serif; font-size: 14px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.7); border: 1.5px solid #00F0FF; z-index: 2147483647; line-height: 1.6; font-weight: normal; text-align: left; cursor: default;';
           tooltip.innerHTML = `
-            <div style="font-size: 11px; font-weight: 700; color: #00F0FF; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px;">clariyor explanation</div>
+            <div style="font-size: 11px; font-weight: 700; color: #00F0FF; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px;">clarior explanation</div>
             <div style="max-height: 300px; overflow-y: auto;">
               ${htmlContent}
             </div>

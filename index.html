@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>claryor</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="bg-glow"></div>
   <div class="container">
-    
+
     <!-- Header (always visible) -->
     <div class="header">
-      <img src="icons/logo.png" class="logo-img" alt="clariyor logo">
+      <img src="icons/logo.png" class="logo-img" alt="clarior logo">
       <div class="header-text">
-        <div class="header-title">clariyor</div>
+        <div class="header-title">clarior</div>
         <div class="header-subtitle">Clarity in Every Highlight.</div>
       </div>
     </div>
@@ -45,27 +47,40 @@
         </div>
 
         <div class="notice">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
           <span>Your API key stays locally on your device.</span>
         </div>
 
         <button type="submit" class="btn-continue" id="btn-save">
           Continue
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
         </button>
       </form>
     </div>
 
     <!-- 2. Dashboard View (Hidden initially) -->
     <div id="dashboard-view" style="display: none; flex-direction: column; gap: 16px; margin-top: 10px;">
-      
-      <div class="dashboard-card" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 20px; text-align: center;">
+
+      <div class="dashboard-card"
+        style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 20px; text-align: center;">
         <h3 id="welcome-text" style="margin-bottom: 8px; font-size: 18px; font-weight: 600;">Welcome!</h3>
-        <p style="color: var(--text-secondary); font-size: 13px; margin-bottom: 20px;">Your AI is ready to transform documentation.</p>
-        
+        <p style="color: var(--text-secondary); font-size: 13px; margin-bottom: 20px;">Your AI is ready to transform
+          documentation.</p>
+
         <div style="margin-bottom: 16px; text-align: left;">
-          <label for="learning-style" style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; display: block;">How should I explain this?</label>
-          <select id="learning-style" style="width: 100%; padding: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #FFF; font-family: inherit; margin-bottom: 16px; outline: none;">
+          <label for="learning-style"
+            style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; display: block;">How should I
+            explain this?</label>
+          <select id="learning-style"
+            style="width: 100%; padding: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #FFF; font-family: inherit; margin-bottom: 16px; outline: none;">
             <option value="Beginner Level (Explain like I'm 5, use analogies and simple terms)">Beginner Level</option>
             <option value="Quick Revision (Bullet points, key takeaways, and flashcard style)">Quick Revision</option>
             <option value="Very Concise (Short executive summary, straight to the point)">Very Concise</option>
@@ -73,7 +88,12 @@
         </div>
 
         <button id="btn-simplify-page" class="btn-continue" style="width: 100%; margin-bottom: 12px; height: 48px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
           Explain / Simplify Highlight
         </button>
 
@@ -81,16 +101,18 @@
           Or look for the floating glowing button on any webpage to open the Interactive AI Chat.
         </p>
 
-        <button id="btn-logout" style="background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 12px; text-decoration: underline; margin-top: 20px; font-family: inherit;">
+        <button id="btn-logout"
+          style="background: transparent; border: none; color: var(--text-secondary); cursor: pointer; font-size: 12px; text-decoration: underline; margin-top: 20px; font-family: inherit;">
           Update API Key Settings
         </button>
       </div>
-      
+
     </div>
-    
+
   </div>
   <script src="src/popup/auth.js"></script>
   <script src="src/popup/controller.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

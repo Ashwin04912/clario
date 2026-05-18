@@ -1,13 +1,13 @@
-# 🌌 clariyor Technical Documentation
-### **The Architecture, Data Flow, and Design System of clariyor**
+# 🌌 clarior Technical Documentation
+### **The Architecture, Data Flow, and Design System of clarior**
 
-**clariyor** is an enterprise-grade, object-oriented, and highly modular Google Chrome Extension (Manifest V3) designed to serve as an intelligent, non-destructive explanation layer over complex documentation. This document provides a highly detailed guide explaining the entire technical stack, object-oriented directory structure, cross-module data flow pipelines, prompt engineering strategies, and the custom **Neon Noir** design system that powers **clariyor**.
+**clarior** is an enterprise-grade, object-oriented, and highly modular Google Chrome Extension (Manifest V3) designed to serve as an intelligent, non-destructive explanation layer over complex documentation. This document provides a highly detailed guide explaining the entire technical stack, object-oriented directory structure, cross-module data flow pipelines, prompt engineering strategies, and the custom **Neon Noir** design system that powers **clarior**.
 
 ---
 
 ## 🏛️ 1. High-Level Architecture Overview
 
-**clariyor**'s execution is divided across three strictly decoupled extension environments that communicate securely using Chrome's tab messaging bus and asynchronous message passes:
+**clarior**'s execution is divided across three strictly decoupled extension environments that communicate securely using Chrome's tab messaging bus and asynchronous message passes:
 
 ```mermaid
 graph TD
@@ -45,7 +45,7 @@ graph TD
 
 ## 📂 2. Enterprise Directory & OOP Module Mapping
 
-**clariyor**'s codebase is designed with strict object-oriented programming (OOP) principles, clean class separations, inheritance, and modular interfaces:
+**clarior**'s codebase is designed with strict object-oriented programming (OOP) principles, clean class separations, inheritance, and modular interfaces:
 
 ```text
 ai_doc_extension/
@@ -111,7 +111,7 @@ Coordinates popup panels, inputs, selector configurations, and handles the **"Ex
 
 ### 🔑 A. API Key Configuration & Validation Flow
 
-When a user initializes **clariyor** via the popup UI, credentials follow a secure sandbox pipeline:
+When a user initializes **clarior** via the popup UI, credentials follow a secure sandbox pipeline:
 
 ```text
 [Popup Input Form] --(name, provider, apiKey)--> [AuthManager.validateApiKey]
@@ -171,7 +171,7 @@ The tab's DOM acts as a centralized events bus:
 
 ## 🎨 4. Neon Noir Design System
 
-The visual design system of **clariyor** is modern, dark, high-contrast, and custom-styled using HSL gradients, glassmorphism, and neon glows:
+The visual design system of **clarior** is modern, dark, high-contrast, and custom-styled using HSL gradients, glassmorphism, and neon glows:
 
 ### 🎨 Color Palette Tokens
 | Token Name | Hex Value | Role |
@@ -201,7 +201,7 @@ The visual design system of **clariyor** is modern, dark, high-contrast, and cus
 
 ## 🔒 5. AI Prompt Engineering
 
-**clariyor** uses tailored system prompt instructions that prioritize clarity, analogies, and strictly prevent bias or brand naming:
+**clarior** uses tailored system prompt instructions that prioritize clarity, analogies, and strictly prevent bias or brand naming:
 
 ### 📖 Word-Selection (Dictionary Explainer) Prompt:
 Used when selection length is **under 80 characters**:
