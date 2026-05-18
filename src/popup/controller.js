@@ -12,11 +12,11 @@ class PopupController {
     this.nameInput = document.getElementById('name');
     this.providerSelect = document.getElementById('provider');
     this.apikeyInput = document.getElementById('apikey');
-    
+
     this.setupView = document.getElementById('setup-view');
     this.dashboardView = document.getElementById('dashboard-view');
     this.welcomeText = document.getElementById('welcome-text');
-    
+
     this.logoutBtn = document.getElementById('btn-logout');
     this.simplifyBtn = document.getElementById('btn-simplify-page');
     this.openSidebarBtn = document.getElementById('btn-open-sidebar');
@@ -61,7 +61,7 @@ class PopupController {
     e.preventDefault();
     const btn = document.getElementById('btn-save');
     const originalText = btn.innerHTML;
-    
+
     btn.innerHTML = this.getSpinnerHTML('Validating...');
     btn.disabled = true;
 
@@ -79,10 +79,10 @@ class PopupController {
     }
 
     await AuthManager.saveConfig(this.nameInput.value, this.providerSelect.value, this.apikeyInput.value);
-    
+
     btn.innerHTML = `Saved & Ready!`;
     btn.style.background = 'linear-gradient(to right, #10B981, #059669)';
-    
+
     setTimeout(() => {
       btn.innerHTML = originalText;
       btn.style.background = '';
@@ -174,33 +174,33 @@ Instructions:
         func: (htmlContent) => {
           const selection = window.getSelection();
           if (!selection || selection.rangeCount === 0) return;
-          
+
           const selectedText = selection.toString().trim();
           const range = selection.getRangeAt(0);
           const originalFragment = range.extractContents();
-          
+
           const wrapper = document.createElement('span');
           wrapper.style.cssText = 'background: rgba(255, 0, 122, 0.15); border-bottom: 2px dashed #FF007A; cursor: help; position: relative; border-radius: 4px; padding: 0 4px; transition: background 0.2s; display: inline-block;';
-          
+
           const icon = document.createElement('span');
           icon.innerHTML = ' 💬';
           icon.style.fontSize = '14px';
           icon.style.verticalAlign = 'text-bottom';
-          
+
           const tooltip = document.createElement('div');
           tooltip.style.cssText = 'display: none; position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); width: 350px; padding: 16px; background: #0A0A0C; color: #E5E7EB; font-family: system-ui, -apple-system, sans-serif; font-size: 14px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.7); border: 1.5px solid #00F0FF; z-index: 2147483647; line-height: 1.6; font-weight: normal; text-align: left; cursor: default;';
           tooltip.innerHTML = `
-            <div style="font-size: 11px; font-weight: 700; color: #00F0FF; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px;">clario explanation</div>
+            <div style="font-size: 11px; font-weight: 700; color: #00F0FF; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px;">clariyor explanation</div>
             <div style="max-height: 300px; overflow-y: auto;">
               ${htmlContent}
             </div>
             <div style="position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 12px; height: 12px; background: #0A0A0C; border-right: 1.5px solid #00F0FF; border-bottom: 1.5px solid #00F0FF;"></div>
           `;
-          
+
           wrapper.appendChild(originalFragment);
           wrapper.appendChild(icon);
           wrapper.appendChild(tooltip);
-          
+
           let timeout;
           wrapper.addEventListener('mouseenter', () => {
             clearTimeout(timeout);
@@ -209,12 +209,12 @@ Instructions:
           wrapper.addEventListener('mouseleave', () => {
             timeout = setTimeout(() => { tooltip.style.display = 'none'; }, 200);
           });
-          
+
           wrapper.addEventListener('click', (e) => {
             e.stopPropagation();
             tooltip.style.display = tooltip.style.display === 'block' ? 'none' : 'block';
           });
-          
+
           range.insertNode(wrapper);
           selection.removeAllRanges();
 

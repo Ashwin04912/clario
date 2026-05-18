@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "clario",
+    "name": "clariyor",
     "description": "Your AI Layer for Understanding.",
     "version": "1.0.0",
     "permissions": [
@@ -13,7 +13,7 @@
     ],
     "action": {
         "default_popup": "index.html",
-        "default_title": "clario",
+        "default_title": "clariyor",
         "default_icon": {
             "16": "icons/icon16.png",
             "32": "icons/icon32.png",
